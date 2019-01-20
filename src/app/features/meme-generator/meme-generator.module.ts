@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MemeGeneratorRoutingModule } from './meme-generator-routing.module';
 import { MemeGeneratorComponent } from './meme-generator.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { MemeGeneratorComponent } from './meme-generator.component';
   ],
   imports: [
     CommonModule,
-    MemeGeneratorRoutingModule
+    MemeGeneratorRoutingModule,
+    SharedModule
   ]
 })
 export class MemeGeneratorModule { }
