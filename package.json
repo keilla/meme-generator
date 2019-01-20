@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mocks": "json-server --watch ./mocks/db.json --routes ./mocks/routes.json"
+    "mocks": "json-server --watch ./mocks/db.json --routes ./mocks/routes.json --delay 3000"
   },
   "private": true,
   "dependencies": {

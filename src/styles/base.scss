@@ -54,6 +54,7 @@ hr {
 
 .button, a.button, button, [type=submit], [type=reset], [type=button] {
   cursor: pointer;
+  outline: none;
 }
 
 button[disabled],

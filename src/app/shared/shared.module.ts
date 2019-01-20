@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [SearchFormComponent],
+  declarations: [SearchFormComponent, ButtonComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
   ],
-  exports: [SearchFormComponent],
+  exports: [SearchFormComponent, ButtonComponent],
 })
 export class SharedModule { }

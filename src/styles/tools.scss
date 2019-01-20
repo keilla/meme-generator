@@ -2,3 +2,17 @@
 * ==================
 * These are mixins and functions.
 */
+
+@mixin loader($primaryColor, $secondaryColor, $width, $height, $borderSize) {
+  border: $borderSize solid $primaryColor;
+  border-left-color: $secondaryColor;
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

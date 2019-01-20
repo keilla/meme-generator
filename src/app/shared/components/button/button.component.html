@@ -1,0 +1,8 @@
+<button
+  class="botao"
+  [class.botao-loader]="temLoader"
+  [class.-loading]="loading"
+  [attr.disabled]="disabled ? 'disabled' : null"
+>
+  <span *ngIf='!loading' class="label">{{ label }}</span>
+</button>

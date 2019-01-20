@@ -1,0 +1,30 @@
+@import 'src/styles/settings';
+@import 'src/styles/tools';
+
+.botao {
+  padding: 11px 16px;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-weight: $weight-semi-bold;
+  background-color: $white;
+  color: $orange;
+
+  &:hover{
+    background-color: $grey-light;
+  }
+
+  &:disabled {
+    opacity: 0.43;
+  }
+
+}
+
+.botao-loader.-loading {
+  &::before {
+    content: '';
+    @include loader($orange, $white, 12px, 12px, 3px);
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchFormComponent } from './search-form.component';
 import { SharedModule } from '../../shared.module';
+import { Subject } from 'rxjs';
 
 describe('SearchFormComponent', () => {
   let component: SearchFormComponent;
@@ -17,6 +18,7 @@ describe('SearchFormComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SearchFormComponent);
     component = fixture.componentInstance;
+    component.$searchEnd = new Subject();
     fixture.detectChanges();
   });
 
