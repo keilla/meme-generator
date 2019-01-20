@@ -1,0 +1,46 @@
+/* Settings
+* ==================
+* These are the basic settings of your architecture.
+* Contains global variables that will define colors, spacings, etc.
+*/
+
+//Cores
+$white: #fff;
+
+$grey: #a9a9a9;
+$grey-light: #d3d3d3;
+$grey-dark: #404040;
+
+$blue: #0080FF;
+$blue-light: lighten($blue, 10%);
+$blue-dark: darken($blue, 10%);
+
+$orange: #FF8000;
+$orange-light: lighten($orange, 10%);
+$orange-dark: darken($orange, 10%);
+
+$purple: #8000FF;
+$purple-light: lighten($purple, 10%);
+$purple-dark: darken($purple, 10%);
+
+$pink: #FF0080;
+$pink-light: lighten($pink, 10%);
+$pink-dark: darken($pink, 10%);
+
+$green: #6EDB00;
+$green-light: lighten($green, 10%);
+$green-dark: darken($green, 10%);
+
+//Font-weight
+$weight-normal: 400;
+$weight-semi-bold: 600;
+$weight-bold: 800;
+
+//Font-size
+$extra-small: 12px;
+$small: 14px;
+$medium: 16px;
+$big: 20px;
+$big-1: 22px;
+$big-2: 24px;
+$big-3: 26px;

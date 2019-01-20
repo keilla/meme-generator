@@ -1,0 +1,90 @@
+/* Settings
+* ==================
+* Basic styling using tag selectors
+*/
+
+@import 'settings.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 24px 0;
+  font-weight: $weight-semi-bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $big-3;
+}
+
+h2 {
+  font-size: $big-2;
+}
+
+h3 {
+  font-size: $big-1;
+}
+
+h4 {
+  font-size: $big }
+
+h5 {
+  font-size: $medium;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:visited{
+    color: $blue-dark
+  }
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+hr {
+  height: 0;
+  border: 0;
+}
+
+.button, a.button, button, [type=submit], [type=reset], [type=button] {
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+p,
+ol,
+ul,
+dl,
+table {
+  margin: 0 0 12px 0;
+}
+
+ul li ul {
+  margin-bottom: 0;
+}
+
+ol li ol {
+  margin-bottom: 0;
+}
+
+input {
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+  border: 1px solid $grey;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $grey-light;
+  }
+}
