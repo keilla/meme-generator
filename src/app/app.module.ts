@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MemeGeneratorComponent } from './features/meme-generator/meme-generator.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MemeGeneratorComponent
   ],
   imports: [
     BrowserModule,
