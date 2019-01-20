@@ -1,0 +1,3 @@
+{
+  "/Generators_Search?q=:keyword&apiKey=:apiKey": "/images?displayName_like=:keyword"
+}

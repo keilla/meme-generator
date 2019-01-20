@@ -1,0 +1,55 @@
+{
+  "images": [
+    {
+      "generatorID": 2074492,
+      "imageID": 8689594,
+      "displayName": "Craig would be so happy",
+      "urlName": "Craig-Would-Be-So-Happy",
+      "totalVotesScore": 0,
+      "instancesCount": 29549,
+      "ranking": 317,
+      "entityVotesSummary": {
+        "entityName": "Generator",
+        "entityID": 2074492,
+        "totalVotesSum": 22,
+        "userID": -913283653,
+        "userVoteScore": 0
+      },
+      "imageUrl": "https://memegenerator.net/img/images/8689594.jpg"
+    },
+    {
+      "generatorID": 1882,
+      "imageID": 212278,
+      "displayName": "Happy Birthday Panda",
+      "urlName": "Happy-Birthday-Panda",
+      "totalVotesScore": 8,
+      "instancesCount": 14246,
+      "ranking": 517,
+      "entityVotesSummary": {
+        "entityName": "Generator",
+        "entityID": 1882,
+        "totalVotesSum": 0,
+        "userID": -913283653,
+        "userVoteScore": 0
+      },
+      "imageUrl": "https://memegenerator.net/img/images/212278.jpg"
+    },
+    {
+      "generatorID": 2016096,
+      "imageID": 8403335,
+      "displayName": "Dangerously Austin Powers",
+      "urlName": "Dangerously-Austin-Powers",
+      "totalVotesScore": 9,
+      "instancesCount": 13897,
+      "ranking": 514,
+      "entityVotesSummary": {
+        "entityName": "Generator",
+        "entityID": 2016096,
+        "totalVotesSum": 7,
+        "userID": -913283653,
+        "userVoteScore": 0
+      },
+      "imageUrl": "https://memegenerator.net/img/images/8403335.jpg"
+    }
+  ]
+}
