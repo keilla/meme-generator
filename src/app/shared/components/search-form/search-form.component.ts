@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SearchFormComponent implements OnInit {
 
   form: FormGroup;
-  @Output() imageWord = new EventEmitter();
+  @Output() keyword = new EventEmitter();
 
   constructor(private fb: FormBuilder) { }
 
@@ -21,7 +21,7 @@ export class SearchFormComponent implements OnInit {
 
   onSubmit() {
     if (this.form.valid) {
-      this.imageWord.emit(this.form.get('image').value);
+      this.keyword.emit(this.form.get('image').value);
     }
   }
 

@@ -40,7 +40,10 @@ describe('ImageService', () => {
         expect(images[0].name).toBe('nameA');
       });
 
-      const req = httpMock.expectOne(`${configurationService.settings}/${service.url}?q=name`);
+      const apiUrl = configurationService.settings.api;
+      const apiKey = configurationService.settings.apiKey;
+
+      const req = httpMock.expectOne(`${apiUrl}/${service.url}?q=name&apiKey=${apiKey}`);
       req.flush(imagesResponse);
     });
   });

@@ -29,7 +29,7 @@ describe('SearchFormComponent', () => {
   describe('onSubmit', () => {
     it('should send image word if form is valid', () => {
       component.form.get('image').setValue('banana');
-      const spyEmit = spyOn(component.imageWord, 'emit');
+      const spyEmit = spyOn(component.keyword, 'emit');
       fixture.detectChanges();
       component.onSubmit();
       expect(component.form.valid).toBeTruthy();
@@ -37,7 +37,7 @@ describe('SearchFormComponent', () => {
     });
 
     it('should send image word if form is invvalid', () => {
-      const spyEmit = spyOn(component.imageWord, 'emit');
+      const spyEmit = spyOn(component.keyword, 'emit');
       fixture.detectChanges();
       component.onSubmit();
       expect(component.form.valid).toBeFalsy();

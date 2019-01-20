@@ -1,3 +1,6 @@
 export class ConfigurationServiceMock {
-  settings = 'apiUrl';
+  settings = {
+    api: 'apiUrl',
+    apiKey: 'apiKey'
+  };
 }

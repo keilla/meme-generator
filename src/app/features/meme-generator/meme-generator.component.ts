@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+
+import { Subject } from 'rxjs';
+import { take } from 'rxjs/operators';
+
+import { SearchFormComponent } from 'src/app/shared/components';
+import { ImageService } from 'src/app/core/services';
+import { Image } from 'src/app/core/models';
 
 @Component({
   selector: 'app-meme-generator',
@@ -7,9 +14,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemeGeneratorComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(SearchFormComponent) searchForm: SearchFormComponent;
+  images: Image[];
+  $unsub = new Subject();
+
+  constructor(private imageService: ImageService) { }
 
   ngOnInit() {
+  }
+
+  searchImage(keyword: string) {
+    this.imageService.getImages(keyword)
+    .pipe(
+      take(1)
+    )
+    .subscribe(
+      (images) => this.images = images
+    );
   }
 
 }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:3000'
+  api: 'http://localhost:3000',
+  apiKey: '712c400a-f7e8-436d-8385-effc2a16446c'
 };
 
 /*
