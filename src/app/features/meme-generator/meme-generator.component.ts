@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { take, finalize } from 'rxjs/operators';
 
 import { SearchFormComponent } from 'src/app/shared/components';
@@ -15,7 +15,7 @@ import { Image } from 'src/app/core/models';
 export class MemeGeneratorComponent implements OnInit {
 
   @ViewChild(SearchFormComponent) searchForm: SearchFormComponent;
-  images: Image[];
+  images: Observable<Image[]>;
   $searchEnd = new Subject();
 
   constructor(private imageService: ImageService) { }
@@ -24,13 +24,10 @@ export class MemeGeneratorComponent implements OnInit {
   }
 
   searchImage(keyword: string) {
-    this.imageService.getImages(keyword)
+    this.images = this.imageService.getImages(keyword)
     .pipe(
       finalize(() => this.$searchEnd.next()),
       take(1)
-    )
-    .subscribe(
-      (images) => this.images = images
     );
   }
 

@@ -1,0 +1,8 @@
+
+:host{
+  padding: 24px 12px;
+
+  .image-gallery-item+.image-gallery-item {
+    margin-left: 24px;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/styles/settings.scss';
+
+.photo {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 2px 8px 0 $grey-light;
+  padding: 6px;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &.selected {
+    background-color: $orange;
+  }
+}

@@ -1,1 +1,3 @@
 <app-search-form (keyword)='searchImage($event)' [$searchEnd]='$searchEnd'></app-search-form>
+
+<app-image-gallery [images]='images | async'></app-image-gallery>
