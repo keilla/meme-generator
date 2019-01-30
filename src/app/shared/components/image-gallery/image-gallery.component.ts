@@ -1,6 +1,4 @@
-import { Component, Input, ViewChildren, QueryList, OnDestroy, ChangeDetectionStrategy, OnChanges, AfterViewChecked, AfterContentInit, AfterViewInit } from '@angular/core';
-
-import { takeUntil } from 'rxjs/operators';
+import { Component, Input, ViewChildren, QueryList, Output, EventEmitter } from '@angular/core';
 
 import { Image } from 'src/app/core/models';
 import { ImageGalleryItemComponent } from './image-gallery-item/image-gallery-item.component';
@@ -14,15 +12,18 @@ export class ImageGalleryComponent {
 
   @Input() images: Image[];
   @ViewChildren(ImageGalleryItemComponent) imagesComponents: QueryList<ImageGalleryItemComponent>;
+  @Output() $selected = new EventEmitter<Image>();
 
   constructor() { }
 
-  clearSelected() {
+  clearSelected(newImage: Image) {
     const selectedImage = this.imagesComponents.find(image => image.selected);
 
     if (selectedImage) {
       selectedImage.unselect();
     }
+
+    this.$selected.emit(newImage);
   }
 
 }

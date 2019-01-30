@@ -31,8 +31,14 @@ export class ImageTextComponent implements OnChanges {
       this.context.drawImage(image, 0, 0, this.dimension, this.dimension);
       this.context.font = '20px Open Sans';
       this.context.fillStyle = this.color;
-      this.context.fillText(this.textTop, 10, 30);
-      this.context.fillText(this.textBottom, 10, 230);
+
+      if (this.textTop) {
+        this.context.fillText(this.textTop, 10, 30);
+      }
+
+      if (this.textBottom) {
+        this.context.fillText(this.textBottom, 10, 230);
+      }
     };
     image.src = this.imageUrl;
   }

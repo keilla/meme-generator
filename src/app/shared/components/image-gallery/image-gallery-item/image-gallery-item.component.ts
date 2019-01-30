@@ -12,12 +12,12 @@ export class ImageGalleryItemComponent  {
   @Input() image: Image;
   @HostBinding('class') klass = 'image-gallery-item';
   selected = false;
-  @Output() $select = new EventEmitter<void>();
+  @Output() $select = new EventEmitter<Image>();
 
   constructor() { }
 
   @HostListener('click') onClick() {
-    this.$select.emit();
+    this.$select.emit(this.image);
     this.selected = true;
   }
 

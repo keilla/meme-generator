@@ -41,13 +41,13 @@ describe('ImageGalleryComponent', () => {
     it('should unselect image', () => {
       component.imagesComponents.first.selected = true;
       const spyImageUnselect = spyOn(component.imagesComponents.first, 'unselect');
-      component.clearSelected();
+      component.clearSelected(new Image({}));
       expect(spyImageUnselect).toHaveBeenCalled();
     });
 
     it('should not unselect image', () => {
       const spyImageUnselect = spyOn(component.imagesComponents.first, 'unselect');
-      component.clearSelected();
+      component.clearSelected(new Image({}));
       expect(spyImageUnselect).not.toHaveBeenCalled();
     });
 

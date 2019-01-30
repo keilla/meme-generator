@@ -1,6 +1,18 @@
+@import 'src/styles/settings.scss';
+
 :host {
   width: 100%;
   display: flex;
   justify-content: left;
   flex-direction: column;
+}
+
+.meme-image {
+  box-shadow: 0 2px 8px 0 $grey-light;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  padding: 12px 0 24px;
 }

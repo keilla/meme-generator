@@ -1,5 +1,11 @@
 <app-search-form (keyword)='searchImage($event)' [$searchEnd]='$searchEnd'></app-search-form>
 
-<app-image-gallery [images]='images | async'></app-image-gallery>
+<app-image-gallery [images]='images | async' ($selected)='loadImage($event)'></app-image-gallery>
 
-<app-form-input-texts></app-form-input-texts>
+<app-form-input-texts ($submit)='saveText()' *ngIf="imageSelected"></app-form-input-texts>
+
+<div *ngIf="imageSelected" class="meme-image">
+  <h3>Your Meme :)</h3>
+  <app-image-text [imageUrl]='imageSelected.url' [textTop]='topText' [textBottom]='bottomText'>
+  </app-image-text>
+</div>
