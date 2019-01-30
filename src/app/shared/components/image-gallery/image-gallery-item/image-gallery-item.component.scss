@@ -1,5 +1,9 @@
 @import 'src/styles/settings.scss';
 
+:host {
+  flex-basis: 30%;
+}
+
 .photo {
   width: 200px;
   height: 200px;

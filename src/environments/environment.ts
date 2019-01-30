@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   api: 'http://localhost:3000',
+  // api: 'http://version1.api.memegenerator.net',
   apiKey: '712c400a-f7e8-436d-8385-effc2a16446c'
 };
 

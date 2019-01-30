@@ -1,8 +1,7 @@
 
 :host{
   padding: 24px 12px;
-
-  .image-gallery-item+.image-gallery-item {
-    margin-left: 24px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 780px;
 }

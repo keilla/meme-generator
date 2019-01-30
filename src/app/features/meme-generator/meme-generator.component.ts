@@ -31,9 +31,9 @@ export class MemeGeneratorComponent implements OnInit {
   }
 
   searchImage(keyword: string) {
+    this.clearValues();
     this.images = this.imageService.getImages(keyword)
       .pipe(
-        tap(this.imageSelected = null),
         finalize(() => this.$searchEnd.next()),
         take(1)
       );
@@ -46,6 +46,12 @@ export class MemeGeneratorComponent implements OnInit {
 
   loadImage(image: Image) {
     this.imageSelected = image;
+  }
+
+  clearValues() {
+    this.topText = null;
+    this.bottomText = null;
+    this.imageSelected = null;
   }
 
 }
