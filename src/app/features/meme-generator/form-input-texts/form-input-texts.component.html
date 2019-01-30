@@ -1,0 +1,18 @@
+<form class="form-input-texts" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class='content'>
+    <div class="field-set">
+      <label class="label">Top text</label>
+      <input class="input" id="top-text" type="text" formControlName="topText">
+    </div>
+    <div class="field-set">
+      <label class="label">Bottom text</label>
+      <input class="input" id="bottom-text" type="text" formControlName="bottomText">
+    </div>
+  </div>
+  <div class="form-footer">
+    <div class='errors' *ngIf="form.invalid && (form.dirty || form.touched) && form.errors.required">
+      Fill at least one field.
+    </div>
+    <app-button class="button" [label]="'save'" (click)="onSubmit()"></app-button>
+  </div>
+</form>

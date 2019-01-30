@@ -18,6 +18,7 @@ import { ImageGalleryModule } from './components/image-gallery/image-gallery.mod
     ImageGalleryModule,
   ],
   exports: [
+    ReactiveFormsModule,
     SearchFormComponent,
     ButtonComponent,
     ImageGalleryModule

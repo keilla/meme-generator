@@ -1,0 +1,32 @@
+.form-input-texts {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.field-set {
+  display: flex;
+  flex-direction: column;
+
+  &+.field-set {
+    margin-top: 12px;
+  }
+
+  & > .label {
+    font-size: 14px;
+  }
+
+  & > .input {
+    padding: 10px;
+  }
+}
+
+.form-footer {
+  margin-top: 24px;
+
+  & > .errors {
+    font-size: 14px;
+    font-style: italic;
+    padding-bottom: 12px;
+  }
+}
